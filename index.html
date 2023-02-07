@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+</head>
+
+<body>
+    <script>
+        //String
+        let name = prompt("Please enter your name");
+        //number
+        const random = Math.floor(Math.random() * 100) + 1;
+        console.log(random);
+        //number
+        let playersNumber = +prompt("Enter a number between 1 and 100");
+
+        while (playersNumber != random) {
+            
+            if (playersNumber > random && playersNumber < 101)
+                alert('It is less');
+            else if (playersNumber < random && playersNumber > 0)
+                alert('It is more');
+            else alert('Your entry is not valid');
+
+            playersNumber = +prompt("Enter a number between 1 and 100");
+        }
+        alert(`Congratulations, ${name}! You won the game!`);
+    </script>
+</body>
+
+</html>
